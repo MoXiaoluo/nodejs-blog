@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" media="screen" title="no title">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- the name in form is necessary -->
+    <form class="" action="/reg" method="post">
+      <div class="form-group">
+        <label for="username"></label>
+        <input type="text" class="form-control" id="username" name="name" placeholder="Enter your User name">
+        <p class="help-block">Help text here.</p>
+      </div>
+      <div class="form-group">
+        <label for="password"></label>
+        <input type="password" class="form-control" id="password" name="pass" placeholder="">
+        <p class="help-block">Help text here.</p>
+      </div>
+      <input type="submit" value="Register"/>
+    </form>
+  </body>
+</html>
