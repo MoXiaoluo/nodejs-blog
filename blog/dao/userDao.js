@@ -6,12 +6,13 @@ module.exports = function(operate,model,data){
       if(err){
         console.log(err);
       }
+      return doc;
     })
   }else if(operate == "select"){
 
   }else if(operate == "delete"){
 
   }else if(operate == "update"){
-    
+
   }
 }

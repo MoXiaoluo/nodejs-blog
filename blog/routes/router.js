@@ -16,8 +16,8 @@ module.exports = function(app){
       "username":req.body.name,
       "password":req.body.pass
     }
-    userDao("add",modelUser,postData);
-    res.send('resgister success');
+    var doc = userDao("add",modelUser,postData);
+    res.send(doc);
   })
   app.get('/logout',function(req,res,next){
     res.send('logout page: use this router : Express');
