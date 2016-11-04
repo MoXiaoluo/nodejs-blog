@@ -1,5 +1,5 @@
 module.exports={
-  "cookieSecret"："lx",
-  "db":"blog",
-  "host":"localhost"
+    "cookieSecret":"lx",
+    "db":"blog",
+    "host":"localhost"
 }

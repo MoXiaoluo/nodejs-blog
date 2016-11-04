@@ -6,7 +6,7 @@ module.exports = function(operate,model,data){
       if(err){
         console.log(err);
       }
-      return doc;
+      console.log(doc);
     })
   }else if(operate == "select"){
 
