@@ -6,8 +6,22 @@ module.exports = function(app){
     res.render('index',{title:'Home page'});
   });
   app.get('/logon',function(req,res,next){
-    res.send('logon page: use this router : Express');
+    res.render('logon',{title:"Logon"})
   });
+
+  app.post("/logonname",function(){
+
+  })
+
+  app.post('/logon',function(req,res,next){
+    var postData = {
+      username:req.body.name,
+      password:req.body.pass
+    };
+    userDao("select",modelUser,postData);
+    res.send("logon success");
+  });
+
   app.get('/reg',function(req,res,next){
     res.render('register',{title:'Register'})
   });
@@ -17,7 +31,8 @@ module.exports = function(app){
       password:req.body.pass
     };
     var doc = userDao("add",modelUser,postData);
-    res.send("success");
+    console.log(doc)
+    res.send("register success");
   });
   app.get('/logout',function(req,res,next){
     res.send('logout page: use this router : Express');

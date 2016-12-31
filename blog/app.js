@@ -15,8 +15,10 @@ var DBsetting = require('./config/DBsetting');
 
 var app = express();
 //connect to mongodb
-mongoose.connect('mongodb://localhost/blog')
-
+var db = mongoose.connect('mongodb://localhost/blog')
+db.connection.on("open",function(){
+  console.log("--------database link success-------")
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
